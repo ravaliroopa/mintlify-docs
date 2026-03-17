@@ -1,0 +1,71 @@
+---
+title: Web3 API
+description: "Endpoints for wallet management, swaps, and DeFi"
+---
+
+Base path: `/api/web3/`
+
+## Wallet
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/view` | Get wallet portfolio (EVM+SVM) |
+| GET | `/export-private-key` | Export wallet private key |
+| GET | `/safe-balance` | Safe USDC balance on Polygon |
+| POST | `/safe-transfer` | Transfer tokens to Safe |
+
+## Tokens
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/trending/` | Trending tokens by chain |
+| GET | `/top-gainers/` | Top gaining tokens (24h) |
+| GET | `/top-volume/` | Tokens by trading volume |
+| GET | `/search/` | Search tokens by name/symbol |
+| GET | `/token/birdeye/` | Token info from BirdEye |
+| GET | `/token/lifi/info/` | Token info from LiFi |
+| GET | `/token/lifi/search/` | Browse tokens by chain |
+| GET | `/token/balance/` | User's token balance |
+
+## Exchange (LiFi)
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/exchange/get-quote/` | Get swap/bridge quote |
+| POST | `/exchange/execute/` | Execute swap/bridge |
+
+### Get Quote
+
+```json
+POST /api/web3/exchange/get-quote/
+{
+  "fromChain": "ETHEREUM",
+  "toChain": "BASE",
+  "sellTokenTicker": "ETH",
+  "buyTokenTicker": "USDC",
+  "amount": "1.5",
+  "walletType": "EVM"
+}
+```
+
+## Pump.fun
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/pumpfun/launch` | Launch token on Pump.fun |
+
+## Agent Registry
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/registry/register` | Register agent on Solana |
+| POST | `/registry/feedback` | Leave agent feedback |
+
+## Other
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/chains/` | List supported chains |
+| GET | `/solana-rpc/` | Solana RPC proxy |
+| GET | `/realtime/` | Real-time price feeds |
+| GET | `/bsc/` | BSC DeFi endpoints |

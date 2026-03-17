@@ -1,0 +1,49 @@
+---
+title: Limitless Exchange
+description: "Trade prediction markets on Base with AMM and CLOB"
+---
+
+Limitless runs on Base chain and supports two trading mechanisms.
+
+## Market Types
+
+<CardGroup cols={2}>
+  <Card title="AMM Markets" icon="water">
+    Trade instantly against a liquidity pool. Price determined by the bonding curve. Great for quick trades.
+  </Card>
+  <Card title="CLOB Markets" icon="book-open">
+    Place limit or market orders matched like a traditional exchange. Better prices for patient traders.
+  </Card>
+</CardGroup>
+
+## How to Trade
+
+<Steps>
+  <Step title="Browse markets">
+    Browse Limitless events in the AI section.
+  </Step>
+  <Step title="Select a market">
+    Tap a market to see details and current prices.
+  </Step>
+  <Step title="Choose side and amount">
+    Select Yes/No and enter your trade amount.
+  </Step>
+  <Step title="Execute">
+    For AMM markets, trade executes instantly. For CLOB markets, place market or limit orders.
+  </Step>
+</Steps>
+
+## Technical Details
+
+| Property | Value |
+|----------|-------|
+| **Chain** | Base (chainId: 8453) |
+| **Collateral** | USDC (6 decimals) |
+| **Order Signing** | EIP-712 (CLOB markets) |
+| **AMM Contract** | Gnosis FPMM |
+
+## Portfolio
+
+View positions at **Limitless Portfolio**:
+- Track positions on both AMM and CLOB markets
+- Claim winnings when markets resolve

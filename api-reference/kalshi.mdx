@@ -1,0 +1,53 @@
+---
+title: Kalshi API
+description: "Endpoints for Kalshi trading"
+---
+
+Base path: `/api/kalshi/`
+
+## Orders
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/order/` | Create order (limit or market) |
+| GET | `/order/` | List user orders |
+| DELETE | `/order/:id` | Cancel order |
+| POST | `/order/close-position` | Close/redeem position |
+
+### Create Order
+
+```json
+POST /api/kalshi/order/
+{
+  "marketId": "string (ticker)",
+  "side": "yes" | "no",
+  "amount": 5,
+  "orderType": "market" | "limit",
+  "price": 60,
+  "orderMode": "dollars" | "shares"
+}
+```
+
+## Markets
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/markets/` | List markets (filter by event) |
+| GET | `/markets/:id` | Get single market |
+| GET | `/markets/:id/orderbook` | Public orderbook |
+| GET | `/markets/:id/candlesticks` | OHLC price data |
+
+## Events
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/events/` | List events |
+
+## Portfolio
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/portfolio/balance` | Account balance |
+| GET | `/portfolio/positions` | Open positions |
+| GET | `/portfolio/fills` | Trade history |
+| GET | `/portfolio/settlements` | Resolved positions |

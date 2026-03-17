@@ -1,0 +1,31 @@
+---
+title: BTC 15-Minute Agent
+description: "AI-powered BTC price prediction trading"
+---
+
+Same architecture as the ETH 15-Minute agent but for **Bitcoin** markets.
+
+## How It Works
+
+1. Fetches upcoming BTC 15-min markets on Polymarket
+2. Uses **Allora BTC predictions** + Chainlink BTC baseline price
+3. Determines trade direction based on predicted vs baseline price difference
+4. Places trades automatically
+
+## Allora Topics
+
+| Asset | Timeframe | Topic ID |
+|-------|-----------|----------|
+| BTC | 5 minutes | 14 |
+| BTC | 8 hours | 18 |
+
+## Strategies
+
+| Strategy | Description |
+|----------|-------------|
+| **Up/Down** (default) | Trades both up and down predictions |
+| **Up Only** | Only trades when the AI predicts BTC will go up |
+
+## Page
+
+Enable and configure at `/btc15min-trading`

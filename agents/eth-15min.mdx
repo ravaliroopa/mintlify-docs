@@ -1,0 +1,43 @@
+---
+title: ETH 15-Minute Agent
+description: "AI-powered ETH price prediction trading"
+---
+
+**Best for:** Traders who want AI-powered ETH price predictions.
+
+Trades ETH 15-minute markets on Polymarket using Allora Network AI predictions.
+
+## How It Works
+
+1. Every 15 minutes, a new market opens: "Will ETH go up or down?"
+2. The agent fetches an AI price prediction from the **Allora Network**
+3. Compares the prediction to the current ETH price (via Chainlink oracle)
+4. If AI predicts UP, buys **Yes**. If DOWN, buys **No**.
+
+## Strategies
+
+| Strategy | Description |
+|----------|-------------|
+| **Up/Down** (default) | Trades both up and down predictions |
+| **Up Only** | Only trades when the AI predicts ETH will go up (more conservative) |
+
+## Allora Network
+
+The agent uses the [Allora Network](https://allora.network), a decentralized AI inference network that aggregates predictions from multiple AI models.
+
+| Asset | Timeframe | Topic ID |
+|-------|-----------|----------|
+| ETH | 5 minutes | 13 |
+| ETH | 8 hours | 17 |
+
+## Settings
+
+| Setting | Range | Default |
+|---------|-------|---------|
+| Position size | $1 - $100 | $5 |
+| Strategy | `up_down`, `up_only` | `up_down` |
+| Notifications | On/Off | On |
+
+## Page
+
+Enable and configure at `/eth15min-trading`

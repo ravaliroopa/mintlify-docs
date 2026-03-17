@@ -1,0 +1,66 @@
+---
+title: AI Trading Agents
+description: "Automated agents that trade prediction markets for you 24/7"
+---
+
+Cobot provides multiple automated trading agents. Each agent can be enabled independently, configured with position sizes and strategies, and runs automatically.
+
+## How to Enable Any Agent
+
+<Steps>
+  <Step title="Navigate to the agent">
+    Go to **Agents** or the specific agent's page.
+  </Step>
+  <Step title="Configure settings">
+    Set your **position size** (how much to trade per position), choose a **strategy**, and toggle **notifications**.
+  </Step>
+  <Step title="Enable">
+    Toggle **Enable** to activate the agent.
+  </Step>
+  <Step title="Fund your wallet">
+    Make sure your wallet has sufficient USDC.
+  </Step>
+</Steps>
+
+## Available Agents
+
+<CardGroup cols={2}>
+  <Card title="BTC 5-Minute" icon="bitcoin" href="/agents/btc-5min">
+    Most advanced agent. 8 strategies using Binance price data + Allora AI predictions.
+  </Card>
+  <Card title="ETH 15-Minute" icon="ethereum" href="/agents/eth-15min">
+    Trades ETH price markets using Allora AI predictions.
+  </Card>
+  <Card title="BTC 15-Minute" icon="bitcoin" href="/agents/btc-15min">
+    Trades BTC 15-minute markets using Allora predictions.
+  </Card>
+  <Card title="SOL 15-Minute" icon="coins" href="/agents/sol-15min">
+    Trades SOL 15-minute markets using Allora predictions.
+  </Card>
+  <Card title="Autonomous" icon="brain" href="/agents/autonomous">
+    AI-powered agent that researches and trades across platforms.
+  </Card>
+  <Card title="Polymarket Farming" icon="tractor" href="/agents/polymarket-farming">
+    Volume farming on high-probability Polymarket markets.
+  </Card>
+  <Card title="Kalshi Farming" icon="wheat" href="/agents/kalshi-farming">
+    Volume farming on Kalshi markets.
+  </Card>
+</CardGroup>
+
+## Common Settings
+
+All trading agents share these core settings:
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| `enabled` | Whether the agent is active | `false` |
+| `minPositionSize` | Minimum trade size in USD | $1-5 |
+| `avgPositionSize` | Target trade size in USD | $5 |
+| `maxPositionSize` | Maximum trade size in USD | $5 |
+| `strategy` | Trading strategy selection | Varies |
+| `notifyOnTrade` | Push notifications on trades | `true` |
+
+<Tip>
+  Start with position sizes of $1-5 while learning how each agent behaves. You can increase later.
+</Tip>

@@ -1,0 +1,46 @@
+---
+title: Authentication
+description: "How to authenticate with Cobot APIs"
+---
+
+## JWT Authentication
+
+All API requests require a JWT token:
+
+```
+Authorization: Bearer <jwt-token>
+```
+
+Tokens are obtained via the login flow (Firebase phone OTP or Google OAuth).
+
+## API Key Authentication (MCP)
+
+For programmatic access via the MCP server, use an API key:
+
+```
+Authorization: Bearer <api-key>
+```
+
+### Creating an API Key
+
+1. Go to **API Keys** in the app
+2. Click **Create API Key**
+3. Copy and securely store your key
+
+### Key Management
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/user/keys/` | POST | Create new API key |
+| `/api/user/keys/` | GET | List API keys |
+| `/api/user/keys/:id/revoke/` | POST | Revoke a key |
+| `/api/user/keys/:id/` | DELETE | Delete a revoked key |
+
+## Rate Limiting
+
+- MCP server: **60 requests per minute** per API key
+- Backend APIs: Standard rate limiting applies
+
+## Internal Service Auth
+
+Services communicate using `X-Internal-Secret` header for service-to-service calls.

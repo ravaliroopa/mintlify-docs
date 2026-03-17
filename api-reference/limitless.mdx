@@ -1,0 +1,52 @@
+---
+title: Limitless API
+description: "Endpoints for Limitless Exchange trading"
+---
+
+Base path: `/api/limitless/`
+
+## Markets
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/markets/active` | List active markets |
+| GET | `/markets/:slug` | Get market details |
+
+## Orders
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/order/?orderType=market` | Place market order |
+| POST | `/order/?orderType=limit` | Place limit order |
+| DELETE | `/order/:id` | Cancel order |
+| GET | `/order/:slug` | Get orders for market |
+
+## Portfolio
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/portfolio/positions` | User positions (AMM or CLOB) |
+| GET | `/portfolio/orders` | All user orders |
+| POST | `/portfolio/claim-position` | Claim resolved positions |
+
+## Market Types
+
+Limitless has two market types that affect how trading works:
+
+### CLOB Markets
+- `tradeType: "clob"`
+- Off-chain EIP-712 signed orders
+- Has `tokens` array (yes/no token IDs)
+
+### AMM Markets
+- `tradeType: "amm"`
+- On-chain FPMM contract execution
+- Has `address` (FPMM contract) and `positionIds`
+
+## Chain Details
+
+| Property | Value |
+|----------|-------|
+| Chain | Base (8453) |
+| Collateral | USDC |
+| CTF Contract | `0xC9c98965297Bc527861c898329Ee280632B76e18` |

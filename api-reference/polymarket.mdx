@@ -1,0 +1,71 @@
+---
+title: Polymarket API
+description: "Endpoints for Polymarket trading"
+---
+
+Base path: `/api/polymarket/`
+
+## Orders
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/order/` | Place order (market or limit) |
+| GET | `/order/` | List open orders |
+| GET | `/order/:id/` | Get order status |
+| DELETE | `/order/:id/` | Cancel order |
+
+### Place Order
+
+```json
+POST /api/polymarket/order/
+{
+  "marketId": "string",
+  "side": "yes" | "no",
+  "amount": 5,
+  "orderType": "market" | "limit",
+  "price": 0.60,
+  "orderMode": "dollars" | "shares"
+}
+```
+
+## Holdings
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/holding/` | Get positions (query: `positionType`, `isReedemable`) |
+
+## Markets
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/markets/` | Browse markets |
+| GET | `/markets/events` | Browse events |
+| GET | `/markets/events/:id` | Get event by ID |
+| GET | `/markets/series` | List series |
+
+## Tokens
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/token/:id/orderbook/` | Get orderbook |
+| POST | `/token/claim/` | Redeem winning positions |
+
+## Bridge
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/bridge/deposit-addresses/` | Get deposit addresses |
+| GET | `/bridge/supported-assets/` | List supported assets |
+| GET | `/bridge/status/:address/` | Check deposit status |
+
+## Safe Wallet
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/safe/withdraw/` | Withdraw USDC from Safe to EOA |
+
+## Whale Transactions
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/whale-txs/` | Get whale transactions |

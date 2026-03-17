@@ -1,0 +1,37 @@
+---
+title: Kalshi Farming Agent
+description: "Volume farming on Kalshi prediction markets"
+---
+
+**Best for:** Users who want to accumulate Kalshi trading volume.
+
+Same concept as Polymarket Farming but targets Kalshi markets.
+
+## Requirements
+
+- **KYC verification** required (dFlow Proof of Personhood)
+- Solana wallet must be funded with USDC
+
+## How It Works
+
+1. Scans Kalshi events for high-probability markets (94-98%)
+2. Validates market eligibility with configurable thresholds
+3. Executes small trades across multiple markets
+4. Monitors with 10% stop-loss
+5. Tracks performance and trade history
+
+## Settings
+
+| Setting | Default |
+|---------|---------|
+| Position size | $5 |
+| Max open positions | 10 |
+| Max daily loss | $100 |
+| Min probability | 94% |
+| Max probability | 98% |
+| Max hours to expiry | 72 |
+| Notifications | On |
+
+## Page
+
+Enable and configure at `/kalshi-farming-trading`

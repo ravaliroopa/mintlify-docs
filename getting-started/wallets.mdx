@@ -1,0 +1,40 @@
+---
+title: Your Wallets
+description: "Understanding your auto-created EVM and Solana wallets"
+---
+
+## Wallet Types
+
+Cobot creates two wallets for you automatically at sign-up:
+
+<CardGroup cols={2}>
+  <Card title="EVM Wallet" icon="ethereum">
+    Works on Ethereum, Base, Polygon, BSC, and Arbitrum. Used for Polymarket, Limitless, and token swaps.
+  </Card>
+  <Card title="Solana Wallet" icon="coins">
+    Works on the Solana blockchain. Used for Kalshi trading, Jupiter swaps, and Pump.fun.
+  </Card>
+</CardGroup>
+
+## Polymarket Safe Wallet
+
+For Polymarket trading, a **Gnosis Safe** wallet is automatically derived from your EVM address:
+
+- All Polymarket funds and positions are held in the Safe
+- Orders are signed by your EOA but executed through the Safe
+- The Safe is deployed and allowances are set automatically (gasless)
+- You can withdraw USDC from Safe back to your personal wallet anytime
+
+## Viewing Your Wallets
+
+You can view your wallet addresses and balances in:
+
+- **Profile** page - See all wallet addresses
+- **Agent Wallet** page - Detailed view with token holdings per chain
+- **Swap** page - Quick balance check before swapping
+
+## Security
+
+- Private keys are **encrypted at rest** by Privy
+- No seed phrases to manage
+- Wallet operations are secured via Privy's embedded wallet infrastructure

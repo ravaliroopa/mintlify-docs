@@ -1,0 +1,46 @@
+---
+title: Polymarket Farming Agent
+description: "Automated volume farming on high-probability markets"
+---
+
+**Best for:** Users who want to accumulate Polymarket trading volume for airdrop eligibility.
+
+Automatically places small trades on high-probability markets (95-98% chance of winning) to build volume.
+
+## How It Works
+
+<Steps>
+  <Step title="Market Discovery (every 6 hours)">
+    Finds markets with 95-98% probability, good volume (> $1,000), and good liquidity (> $500). Excludes crypto price and sports markets.
+  </Step>
+  <Step title="Market Validation">
+    Validates markets using optional AI risk assessment (GPT-4o-mini). Falls back to stricter filters if AI is unavailable.
+  </Step>
+  <Step title="Trade Execution (every 2 minutes)">
+    Places small trades across validated markets. Prevents duplicates with idempotency checks.
+  </Step>
+  <Step title="Monitoring">
+    Monitors positions with a 10% stop-loss. Auto-redeems winning positions when markets resolve.
+  </Step>
+</Steps>
+
+## Safety Features
+
+- **Idempotency**: Prevents duplicate trades on the same market
+- **Position limits**: Max open positions (default: 10) and max exposure (default: $1,000)
+- **Stop-loss**: Closes positions if price drops 10% from entry
+- **User-level locks**: Prevents concurrent trade execution
+
+## Settings
+
+| Setting | Default |
+|---------|---------|
+| Position size per trade | $5 |
+| Max open positions | 10 |
+| Max total exposure | $1,000 |
+| Stop-loss threshold | 10% |
+| Notifications | On |
+
+## Page
+
+Enable and configure at `/airdrop-farming-trading`
