@@ -1,12 +1,9 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "willow",
   "name": "Cobot",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
-  },
-  "favicon": "/favicon.svg",
+  "logo": "/images/Group102.png",
+  "favicon": "/images/favicon.ico",
   "colors": {
     "primary": "#8b5cf6",
     "light": "#a78bfa",
@@ -88,5 +85,6 @@
       "x": "https://x.com/cobotgg",
       "telegram": "https://t.me/cobotgg"
     }
-  }
+  },
+  "description": "AI trading companion and a prediction market aggregator"
 }
