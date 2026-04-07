@@ -15,17 +15,17 @@
     "tabs": [
       {
         "tab": "Documentation",
-        "groups": [
+        "pages": [
           {
             "group": "Getting Started",
             "pages": [
               "introduction",
               "getting-started/create-account",
               "getting-started/wallets",
-              "getting-started/fund-wallet",
-              "roadmap"
+              "getting-started/fund-wallet"
             ]
           },
+          "roadmap",
           {
             "group": "Trading",
             "pages": [
