@@ -25,7 +25,6 @@
               "getting-started/fund-wallet"
             ]
           },
-          "roadmap",
           {
             "group": "Trading",
             "pages": [
@@ -56,7 +55,9 @@
               "features/mcp-server",
               "features/portfolio"
             ]
-          }
+          },
+          "tokenomics",
+          "roadmap"
         ]
       },
       {
