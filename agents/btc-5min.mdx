@@ -1,48 +1,44 @@
 ---
-title: BTC 5-Minute Agent
-description: "The most advanced crypto trading agent with 8 strategies"
+title: "BTC 5-Minute Agent"
+description: "The most advanced crypto trading agent with multiple strategies"
 ---
 
 **Best for:** Active traders who want to capitalize on short-term BTC price movements.
 
-Trades BTC 5-minute prediction markets on Polymarket using real-time Binance price data and Allora AI predictions to determine trade direction.
+Trades BTC 5-minute prediction markets on Polymarket using real-time Chainlink, binance price data and Allora AI predictions to determine trade direction.
 
 ## How It Works
 
 1. **Market Discovery** (every 30 min): Finds upcoming BTC 5-min markets on Polymarket
-2. **Signal Analysis**: Combines Binance real-time price feed with Allora AI predictions
+2. **Signal Analysis**: Combines real-time price feed with Allora AI predictions
 3. **Strategy-Based Entry**: Different strategies have different entry criteria and timing
-4. **Position Monitoring**: Re-evaluates positions at minute 2 and minute 3
+4. **Position Monitoring**: Re-evaluates positions  
 
 ## Strategies
 
 Pick one strategy when enabling the agent:
 
 | Strategy | Risk | Signal Required | Order Type |
-|----------|------|----------------|------------|
-| **Up/Down** | Medium | BN >= 7 bps + Allora agrees + Allora diff >= 0.1% | Market |
-| **Confirmed Lead** | Medium | BN >= 7 bps + Allora agrees (override at >= 10 bps) | Market |
-| **Limiter** | Lower | BN >= 11 bps + Allora agrees | Limit @ 60c |
-| **Allora Strike** | Lower | BN >= 8 bps + Allora agrees (3 eval windows) | Limit @ 60c |
+| --- | --- | --- | --- |
+| **Up/Down** | Medium | AI signal strength 70% \+ Allora agrees \+ Allora diff \>= x | Market |
+| **Confirmed Lead** | Medium | AI signal strength 70%\+ Allora agrees | Market |
+| **Limiter** | Lower | AI signal strength 90% \+ Allora agrees | Limit @ 60c |
+| **Allora Strike** | Lower | AI signal strength 80% \+ Allora agrees (3 eval windows) | Limit @ 60c |
 | **Max** | Medium | Limiter OR Allora Strike signal | Limit @ 60c |
-| **Peak** | Higher | BN >= 10 bps (no Allora needed) | Market |
-| **Sniper** | Highest | BN >= 25 bps (extreme momentum only) | Market |
 
 ### Signal Definitions
 
-- **BN (Binance Lead)**: How much BTC has moved on Binance since the market reference time, in basis points. 1 bps = 0.01%.
 - **Allora Agreement**: The Allora AI prediction agrees with the direction of the Binance move.
-- **Allora Diff**: The percentage difference between Allora's predicted price and the current baseline.
 
 <Info>
-  **Which strategy should I pick?** Start with **Up/Down** for a good balance of trade frequency and win rate. Move to **Limiter** for more conservative entries with limit orders.
+  **Which strategy should I pick?** Start with **Up/Down** for a good balance of trade frequency and win rate. Move to **Allora strike** for more conservative entries with limit orders.
 </Info>
 
 ## Settings
 
 | Setting | Range | Default |
-|---------|-------|---------|
-| Position size | $1 - $100 | $5 |
+| --- | --- | --- |
+| Position size | $1 - $ 100 | \$5 |
 | Strategy | See table above | `up_down` |
 | Notifications | On/Off | On |
 
