@@ -3,10 +3,9 @@
   "theme": "maple",
   "name": "Cobot",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/images/Profile_Cobor_Isotype_Blue(2).png",
+    "light": "/images/Profile_Cobor_Isotype_Blue(2).png"
   },
-  "favicon": "/favicon.svg",
   "colors": {
     "primary": "#8b5cf6",
     "light": "#a78bfa",
@@ -89,5 +88,7 @@
       "x": "https://x.com/cobotgg",
       "telegram": "https://t.me/cobotgg"
     }
-  }
+  },
+  "favicon": "/images/favicon.ico",
+  "description": "Autonomous trading agents for sports, copy trading , arbitrage and more."
 }
