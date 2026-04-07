@@ -42,7 +42,6 @@
               "agents/eth-15min",
               "agents/btc-15min",
               "agents/sol-15min",
-              "agents/autonomous",
               "agents/polymarket-farming",
               "agents/kalshi-farming"
             ]
