@@ -50,7 +50,6 @@
             "group": "Features",
             "pages": [
               "features/token-swaps",
-              "features/ai-chat",
               "features/mcp-server",
               "features/portfolio"
             ]
